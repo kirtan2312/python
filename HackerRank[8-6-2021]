@@ -1,0 +1,53 @@
+Problem Name : Print Function
+Solution:
+  if __name__ == '__main__':
+    n = int(input())
+    #solution starting from here
+    result = ""
+    for number in range(1,n+1):
+        result = result + str(number)
+    print(result)
+    
+    
+Problem Name : List Comprehensions
+Solution:
+  if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    temp_list = []
+    result = []
+    #solution starting from here
+    for first in range(x+1):
+        for second in range(y+1):
+            for third in range(z+1):
+                if first+second+third != n:
+                    temp_list = [first,second,third]
+                    result.append(temp_list)
+print(result)
+
+Problem Name : Find the Runner-Up Score!
+Solution:
+  if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    #solution starting from here
+    sorted_array_set = sorted(list(set(arr)))
+    print(sorted_array_set[-2])
+    
+    
+Problem Name : Finding the percentage
+Solution:
+  if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    #solution starting from here
+    result = student_marks[query_name]
+    percentage = sum(result)/len(result)
+    print("%.2f"%percentage)
