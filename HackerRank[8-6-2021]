@@ -51,3 +51,27 @@ Solution:
     result = student_marks[query_name]
     percentage = sum(result)/len(result)
     print("%.2f"%percentage)
+
+
+Problem Name : Lists
+Solution:
+  if __name__ == '__main__':
+    N = int(input())
+    #solution starting from here
+    result = []
+    for i in range(0,N):
+        inputs = input().split(" ")
+        if inputs[0] == "insert":
+            result.insert(int(inputs[1]),int(inputs[2]))
+        elif inputs[0] == "print":
+            print(result)
+        elif inputs[0] == "remove":
+            result.remove(int(inputs[1]))
+        elif inputs[0] == "append":
+            result.append(int(inputs[1]))
+        elif inputs[0] == "sort":
+            result.sort()
+        elif inputs[0] == "pop":
+            result.pop()
+        elif inputs[0] == "reverse":
+            result.reverse()
